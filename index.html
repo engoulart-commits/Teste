@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Shot | Minimalist Target Shooter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- HUD Overlay -->
+        <div id="hud" class="overlay hidden">
+            <div class="hud-item score-box">
+                <span class="label">PONTOS</span>
+                <span id="score">0</span>
+            </div>
+            <div class="hud-item timer-box">
+                <span id="timer">60</span>
+                <span class="label">S</span>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay active">
+            <div class="glass-panel">
+                <h1>NEO <span class="accent">SHOT</span></h1>
+                <p>Acerte os alvos o mais rápido possível.</p>
+                <div class="legend">
+                    <div class="legend-item"><span class="dot green"></span> Comum (+10)</div>
+                    <div class="legend-item"><span class="dot yellow"></span> Rápido (+50)</div>
+                    <div class="legend-item"><span class="dot red"></span> Explosivo (-100)</div>
+                </div>
+                <button id="start-btn" class="main-btn">INICIAR</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="glass-panel">
+                <h2>FIM DE JOGO</h2>
+                <div class="final-score-display">
+                    <span class="label">SUA PONTUAÇÃO</span>
+                    <span id="final-score">0</span>
+                </div>
+                <button id="restart-btn" class="main-btn">REINICIAR</button>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
